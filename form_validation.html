@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-image: url(./sanu.jpeg);
+        background-repeat: no-repeat;
+        /* background-position: center;  */
+        background-size: cover;
+    }
+    section{
+        /* border: 2px solid black; */
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: absolute;
+        top: 15%;
+        left: 25%;
+    }
+    #myForm{
+        padding: 5px;
+        line-height: 15px;
+        margin: 15px;
+    }
+    input{
+        text-align: center;
+        margin: 15px;
+        padding: 15px;
+    }
+    h1{
+        text-align: center;
+
+    }
+</style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<body>
+    <h1>Welcome to KD's Webpage</h1>
+    <section>
+        <h1>Registration</h1>
+        <form id="myForm">
+            <!-- <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <input type="submit" value="Submit"> -->
+            <div class="mb-3">
+                <label for="name" class="form-label">Full Name:</label>
+                <input type="name" class="form-control" id="name" aria-describedby="emailHelp">
+              </div>
+
+              <div class="mb-4">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+
+              <button type="submit" class="btn btn-primary">Submit</button>
+
+          </form>
+
+          <!-- <form id="myForm">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Full Name:</label>
+              <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form> -->
+    </section>
+</body>
+<script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("exampleInputPassword1").value;
+  
+    if (name === "" || email === "" || password === "") {
+      alert("All fields are required!");
+      event.preventDefault(); // Prevent form submission
+    }
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</html>
+  
